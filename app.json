@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Delivery Receipts",
+    "slug": "mobile-delivery-receipts",
+    "version": "0.1.0",
+    "scheme": "deliveryreceipts",
+    "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "net.folderit.deliveryreceipts"
+    },
+    "android": {
+      "package": "net.folderit.deliveryreceipts",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#B73521"
+      }
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 112,
+          "resizeMode": "contain",
+          "backgroundColor": "#B73521"
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Choose a photo of the handoff. It is copied into Delivery Receipts and stays on this device.",
+          "cameraPermission": "Delivery Receipts uses the camera to photograph a package at the handoff. Photos stay on this device.",
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
