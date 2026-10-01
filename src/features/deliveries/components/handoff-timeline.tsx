@@ -68,9 +68,10 @@ function Step({ title, detail, meta, reached, last }: StepProps) {
   return (
     <View
       accessible
-      accessibilityLabel={`${title}. ${detail}${meta ? `. ${meta}` : ''}. ${
-        reached ? 'Done' : 'Not yet'
-      }.`}
+      accessibilityLabel={[title, detail, meta, reached ? 'Done' : 'Not yet']
+        .filter((part): part is string => Boolean(part))
+        .map((part) => `${part.replace(/\.$/, '')}.`)
+        .join(' ')}
       style={styles.step}
     >
       <View style={styles.rail}>
