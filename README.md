@@ -298,6 +298,8 @@ Through [folderit.net](https://folderit.net).
 
 </details>
 
+For more context on why this was built offline-first instead of depending on a live connection, see [this writeup on the Folder IT blog](https://folderit.net/proof-of-delivery-app-a-real-offline-first-build/).
+
 ## License
 
 Released under the [MIT License](LICENSE.md). Copyright (c) 2026 Folder IT.
